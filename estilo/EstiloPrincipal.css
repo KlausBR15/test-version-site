@@ -888,7 +888,7 @@ main {
         padding-top: 20%;
         height: auto;
     }
-    #home > main::before {
+    /* #home > main::before {
         position: absolute;
         content: '';
         width: 35%;
@@ -908,7 +908,7 @@ main {
 
         inset: 5px;
 
-    }
+    } */
     @keyframes mainload {
         from {
             rotate: 0deg;
