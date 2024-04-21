@@ -905,7 +905,7 @@ main {
     #home > main::after {
         position: absolute;
         content: '';
-        background-color: red;
+
         inset: 5px;
 
     }
