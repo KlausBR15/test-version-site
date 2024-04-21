@@ -1,0 +1,1117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+:root {
+    --cor-letra: #e2dfdf;
+    --cinza-claro: #373739;
+    --cinza-escuro: #19191a;
+    --black-proprio: #020202;
+    --gold-color: #d4a413;
+    --begue: #ecdda2;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--black-proprio);
+    width: 10px;
+   
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(94, 83, 26);
+
+}
+
+
+body {
+
+    height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--cor-letra);
+}
+
+article {
+     height: 100vh;
+}
+
+header {
+    padding: 15px 25px;
+    width: 100%;
+    position: fixed;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black-proprio);
+    box-shadow: 0px 1px 5px rgb(255, 217, 0); 
+    z-index: 99;
+
+}
+
+#gambiarra {
+    width: 100%;
+    height: 120px;
+    background-color: transparent
+}
+
+
+#centro {
+    margin-left: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#centro img {
+    width: 70px;
+    height: 70px;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+
+#centro h1 {
+    font-size: 2em;
+    font-weight: normal;
+    animation: cor-titulo 5s ease alternate infinite;
+}
+
+nav {
+    display: flex;
+    margin-right: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.25em;
+    margin: 0 22px;
+    color: var(--cor-letra);
+    transition: .5s;
+}
+
+nav a:hover {
+    color: var(--gold-color);
+    scale: 1.1;
+}
+
+
+
+
+
+
+/* entrada */ 
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinza-escuro);
+    padding-bottom: 40px;
+
+}
+
+main {
+    display: flex;
+    color: var(--cor-letra);
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#texto-entrada h2 {
+    font-size: 2.3em;
+}
+
+
+#texto-entrada h1 {
+    font-size: 4.2em;
+    background-image: linear-gradient(to right, gold, var(--gold-color));
+    background-size: 200% 200%;
+    animation: degrade 5s ease-in-out infinite alternate;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#texto-entrada p {
+    margin: 20px 0;
+    font-size: 1.25em;
+    max-width: 600px;
+    text-align: justify;
+}
+
+
+
+#imagem {
+    animation: flutuar 3.5s ease-in-out alternate infinite;
+    position: relative;
+    transition: 3s;
+    opacity: 0.8;
+    width: 360px;
+    height: 360px 
+
+}
+
+#imagem > img {
+    width: 360px;
+    height: 360px;
+}
+
+#imagem::after {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--gold-color);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: bordagirar 35s linear infinite;
+    box-shadow: 0px 0px 15px var(--gold-color);
+
+}
+
+#imagem:hover {
+    opacity: 0.35;
+}
+
+
+
+
+
+/* segunda parte*/ 
+
+#sobre {
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    background-image: linear-gradient(to top, var(--black-proprio) 30%, var(--cinza-escuro));
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+
+
+#box {
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 15px;
+    background-color: var(--cinza-claro);
+    max-width: 700px;
+    min-height: 340px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--gold-color);
+    border: 2mm ridge var(--gold-color);
+    margin: 0px 30px;
+
+
+}
+
+#box > h1 {
+    font-size: 3em;
+    color: rgb(204, 175, 9);
+    font-weight: normal;
+    text-shadow: 2px 0px 10px rgba(0, 0, 0, 0.562);
+}
+
+#box > p  {
+    z-index: 1;
+    font-size: 1.5em;
+    text-align: justify;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.664);
+    color: rgb(223, 223, 223);
+
+}
+
+#primeira {
+    position: absolute;
+    background-image: url(imagens/four\ grãos.png);
+    background-position: center;
+    background-repeat: repeat-x;
+    left: -500px;
+    top: 20%;
+    width: 2000px;
+    height: 150px;
+    background-size: contain;
+    animation: first 30s linear alternate infinite;
+}
+
+
+#segunda {
+    position: absolute;
+    background-image: url(imagens/four\ grãos.png);
+    background-position: center;
+    background-repeat: repeat-x;
+    right: -500px;
+    bottom: 11%;
+    width: 2000px;
+    height: 150px;
+    background-size: contain;
+    animation: second 30s linear alternate infinite;
+}
+
+
+
+#torneios {
+    background-color: var(--black-proprio);
+}
+
+@keyframes first {
+    from {
+        left: -500px;
+        
+    }
+    to {
+
+        left: 0;
+    }
+}
+
+
+@keyframes second {
+    from {
+        
+        right: -500px;
+        
+    }
+    to {
+        right: 0vw;
+    }
+}
+
+
+
+
+@keyframes rotateforborder {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes flutuar {
+    
+    to {
+        transform: translateY(10%)
+    }
+}
+
+@keyframes bordagirar {
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes degrade {
+    to {
+        background-position: 0% 50%;
+    }
+    from {
+        background-position: 100% 50%;
+    }
+    
+}
+
+
+
+#torneios {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    isolation: isolate;
+}
+
+
+#torneios::before {
+    position: absolute;
+    content: '';
+    background-image: url(imagens/pexels-café.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    inset: 0;
+    background-size: cover;
+    left: -320px;
+    box-shadow: 50px 230px 400px black inset;
+    opacity: 0.5;
+    z-index: -1;
+
+
+
+
+}
+
+#torneios > main {
+    display: block;
+}
+#torneios div {
+    margin-bottom: 100px;
+}
+
+#torneios  h1 {
+    font-size: 4em;
+    background-image: linear-gradient(30deg, gold 45%, rgb(179, 0, 179), rgb(1, 218, 218) 55%);
+    background-size: 150% 200%;
+
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: h1colors 11s linear alternate infinite; 
+}
+
+#torneios p {
+    font-size: 1.4em;
+    max-width: 400px;
+    margin: auto;
+    text-shadow: 2px 2px 5px black;
+    color: rgb(233, 233, 233)
+}
+
+
+#newpage {
+    display: grid;
+    max-width: 100%;
+    margin-top: 50px;
+    position: relative;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    
+
+}
+
+#newpage div {
+    width: 180px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    
+}
+
+.icones {
+    margin-right: -100px;
+}
+
+
+
+
+
+/* Primeiro botão (luna)  */
+
+.hierarquia {
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 280px;
+    min-width: 260px;
+    height: 70px;
+
+}
+
+#luna {
+    position: relative;
+    border: 3px solid #3d5e8c;
+    box-shadow: 0px 0px 5px white;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.678);
+    background: url(imagens/estrelas\ fundo.jpg) center top no-repeat;
+    background-size: 200% 500%;
+    animation: estrelas 15s ease-in-out alternate infinite;
+    transition-duration: 0.4s;
+    overflow: hidden;
+
+
+}
+#luna > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    z-index: 1;
+}
+
+#luna > a:hover {
+    text-shadow: 1px 1px 8px black;
+}
+
+
+#lunar {
+    animation: lunar 3s ease-in-out alternate infinite;
+
+}
+
+#lua {
+    width: 90px;
+    height: 80px;
+    rotate: 35deg;
+    filter: brightness(1.3);
+    transition-duration: 0.8s;
+}
+
+#lua:hover {
+    filter:  brightness(1);
+    rotate: 395deg
+}
+
+@keyframes lunar {
+    from {
+        transform: translateY(-6%);
+    }
+    to {
+        transform: translateY(6%);
+    }
+}
+
+
+@keyframes h1colors {
+    from {
+        background-position: -50% 50%;
+    }
+    to {
+        background-position: 150% 50%;
+    }
+}
+
+@keyframes estrelas {
+    from {
+        background-position: 0% 100%;
+    }
+    to {
+        background-position: 100% 20%;
+    }
+}
+
+#luna::after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: -100%;
+
+
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    rotate: 135deg;
+    filter: blur(4px);
+    box-shadow: 0px 0px 10px white;
+
+
+}
+
+#luna:hover::after {
+    animation: brilho .7s linear forwards;
+}
+#luna:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 15px white;
+    border: 3px solid #001738;
+}
+
+#luna::before {
+    position: absolute;
+    content: '';
+    left: 62px;
+    top: 100px;
+    background: url(imagens/lua\ cheia.png) center no-repeat;
+    background-size: cover;
+    width: 31%;
+    height: 85%;
+    box-shadow: 0px 0px 25px white;
+    border-radius: 50%;
+    transition-duration: 2s;
+    z-index: 0;
+}
+
+#luna:hover::before {
+    top:2.75px;
+    animation: lunar 3s ease-in-out alternate infinite;
+    z-index: 0;
+}
+
+
+@keyframes brilho {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 110%;
+    }
+    
+}
+
+
+
+
+
+/* segundo botão (plap) */
+
+
+
+#plap {
+    position: relative;
+    background-color: rgb(224, 211, 134);
+    filter: brightness(0.9);
+    transition-duration: 0.4s;
+    border: 2px solid white;
+    box-shadow: 0px 0px 3px cyan;
+    overflow: hidden;
+
+
+}
+#plap:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 20px cyan;
+
+}
+#plap > a {
+    text-decoration: none;
+    font-size: 1.05em;
+    z-index: 1;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    text-shadow: 1px 1px 2px black;
+    -webkit-text-fill-color: white;
+
+    
+}
+
+#plap::after {
+    position: absolute;
+    content: '';
+    width: 300%;
+    height: 200%;
+    background: url(imagens/new\ wave.png) center no-repeat;
+    background-size: cover;
+    left: -170px;
+    top: 50px;
+    transition-duration: 1s;
+}
+
+#plap:hover::after {
+    top: -60px;
+}
+
+#plap::before {
+    position: absolute;
+    content: '';
+    background: url(imagens/bolhas.png) center no-repeat;
+    background-size: cover;
+    height: 150%;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    transition-duration: 2.5s;
+}
+
+#plap:hover::before {
+    top: -10px;
+}
+@keyframes subir {
+
+    to {
+        top: -60px;
+    }
+    
+}
+#agua {
+    position: absolute;
+    width: 150%;
+    left: 0;
+    bottom: 0;
+}
+#wave1 {
+    position: absolute;
+    bottom: -3px;
+    width: 110%;
+    animation: wave1 5s ease-in-out alternate infinite;
+    transition-duration: 1s;
+    left: 0;
+
+}
+
+
+#wave2 {
+    position: absolute;
+    bottom: -3px;
+    width: 110%;
+    animation: wave2 7s ease-in-out alternate infinite;
+    transition-duration: 1s;
+    right: 0;
+    
+}
+#wave3 {
+    position: absolute;
+    bottom: -1px;
+    width: 110%;
+    animation: wave3 10s linear alternate infinite;
+    transition-duration: 1s;
+    left: 0;
+    
+}
+
+#bolha {
+    margin-top: -10px;
+
+    animation: lunar 3s ease-in-out alternate infinite;
+    margin-right: 10px;
+
+}
+
+#bombom {
+    width: 100px;
+    height: 100px;
+    filter: brightness(0.85);
+    transition-duration: 1s;
+
+}
+
+
+#bombom:hover {
+    scale: 1.3;
+    filter: brightness(1);
+}
+
+
+@keyframes wave1 {
+    from {
+        left: -120px
+    }
+    to {
+        left: -15px;
+
+    }
+}
+
+@keyframes wave2 {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 100px;
+    }
+}
+
+@keyframes wave3 {
+    from {
+        left: -50px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+#old {
+    border: 3px solid green;
+    box-shadow: 0px 0px 10px green;
+    position: relative;
+    background: url(imagens/floresta.gif) center no-repeat;
+    background-size: cover;
+    transition-duration: 0.5s;
+
+
+
+}
+
+#old > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25em;
+    z-index: 1;
+    text-shadow: 2px 2px 10px black;
+
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+
+}
+
+
+#old::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: url(imagens/folhacima.png) center no-repeat;
+    background-size: cover;
+    transition: 1.5s;
+    opacity: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#old::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(imagens/capivara.png) center no-repeat;
+    background-size: cover;
+    rotate: -2deg;
+    filter: brightness(1.2);
+    transition-duration: 2s;
+    z-index: -1;
+    
+}
+
+#old:hover::before {
+    filter: brightness(1.3);
+    top: -65px;
+    
+    
+
+}
+
+
+#old:hover::after {
+    filter: brightness(0.8) contrast(1.3);
+    opacity: 1;
+    
+    height: 100%;
+    
+}
+#bengala {
+    width: 120px;
+    height: 120px;
+    filter: brightness(2);
+    margin-top: -40px;
+    rotate: -10deg;
+    transition: 1s;
+}
+#bengala:hover {
+    scale: 1.4;
+    filter: brightness(2.3);
+    rotate: 10deg;
+}
+#beng {
+    animation: old 3s ease-in-out alternate infinite;
+}
+
+@keyframes old {
+    from {
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(15%);
+    }
+}
+
+#old:hover {
+    box-shadow: 0px 0px 60px rgb(0, 163, 0);
+    border: 3px solid rgb(40, 214, 92);
+
+    
+}
+
+
+@media (max-width: 1144px) {
+    #newpage {
+        grid-template-columns: 1fr;
+        margin-top: -50px;
+        margin-bottom: 40px;
+    }
+    .hierarquia {
+        margin: 25px auto;
+    }
+    #plap {
+        margin-left: -20px;
+    }
+    #bolha {
+        margin-left: -25px;
+    }
+    #lunar {
+        margin-left: -20px;
+    }
+    #beng {
+        margin-left: -25px;
+    }
+
+}
+
+@media (max-width: 1310px) {
+
+    #home > main {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 15px;
+        margin-top: 150px;
+
+    }
+    #texto-entrada {
+        margin: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #imagem {
+        margin: auto;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    #imagem > img {
+        max-width: 200px;
+        max-height: 200px 
+    }
+    #home {
+        padding: 40% 0%;
+        
+    }
+
+    #sobre {
+        padding: 350px 0%;
+    }
+    #torneios {
+        padding-top: 20%;
+        height: auto;
+    }
+    #home > main::before {
+        position: absolute;
+        content: '';
+        width: 35%;
+        height: 300%;
+        background-color: var(--gold-color);
+        left: 40%;
+        rotate: 45deg;
+        animation: mainload 10s linear infinite;
+
+
+  
+        
+}   
+    #home > main::after {
+        position: absolute;
+        content: '';
+        background-color: red;
+        inset: 5px;
+
+    }
+    @keyframes mainload {
+        from {
+            rotate: 0deg;
+        }
+        to {
+            rotate: 360deg;
+        }
+    }
+
+    #texto-entrada, #imagem {
+        z-index: 1;
+    }
+    
+}
+
+@media (max-width: 1190px) {
+    #torneios  h1 {
+        background-image: linear-gradient(30deg, gold 45%, rgb(179, 0, 179), rgb(1, 218, 218) 55%);
+        background-size: 260% 200%;
+    }    
+    
+    @keyframes h1colors {
+        from {
+            background-position: 0% 50%;
+        }
+        to {
+            background-position: 100% 50%;
+        }
+    }
+}
+
+
+
+i {
+    margin-right: 10%;
+    display: none;
+}
+
+
+@media (max-width: 800px) {
+    i {
+        display: block;
+    }
+    
+    header {
+        padding: 5px 0px;
+    }
+    
+    #centro img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    #centro h1 {
+        font-size: 1.5em;
+    }
+
+    header nav {
+        position: absolute;
+        right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        bottom: -225px;
+        display: none;
+    }
+    header a {
+        text-align: center;
+    }
+    #gambiarra {
+        height: 70px;
+
+    }
+
+
+
+    #texto-entrada h2 {
+        font-size: 2em;
+    }
+    
+    
+    #texto-entrada h1 {
+        font-size: 3.5em;
+        color: gold;
+    }
+    
+    #texto-entrada p {
+        font-size: 1.25em;
+    }
+    
+    
+    
+ 
+
+
+}
+
+
+
+
+@media (max-width: 650px) {
+    #torneios h1 {
+        font-size: 3.2em;
+    }
+    #torneios p {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 540px) {
+    #torneios h1 {
+        font-size: 2.65em;
+    }
+    /* #torneios p {
+        font-size: 1.1em;
+    } */
+
+    #newpage div {
+        width: 150px;
+        height: 60px;
+    }
+    #newpage a {
+        font-size: 0.9em;
+    }
+    .novapagina {
+        margin-right: 30px;
+    }
+    #plap > a {
+        font-size: 0.88em;
+    }
+    #old:hover::before {
+        filter: brightness(1.3);
+        top: -55px;
+    }
+    #box h1 {
+        font-size: 2.5em;
+    }
+    #box p {
+        margin-top: 20px;
+        font-size: 1.3em;
+    }
+    #luna::before {
+        left: 50px;   
+    }
+
+
+    
+    #texto-entrada h2 {
+        font-size: 1.75em;
+    }
+    
+    
+    #texto-entrada h1 {
+        font-size: 3.25em;
+        color: gold;
+    }
+    
+    #texto-entrada p {
+        font-size: 1.20em;
+    }
+
+    #home > main {
+        width: 90%;
+    }
+
+    
+    
+}
+
+@media (max-width: 420px) {
+    /* #torneios h1 {
+        font-size: 2.3em;
+    } */
+    #box h1 {
+        font-size: 2.2em;
+    }
+    #box p {
+        font-size: 1.2em;
+    }
+    
+    #texto-entrada h2 {
+        font-size: 1.5em;
+    }
+    
+    
+    #texto-entrada h1 {
+        font-size: 2.95em;
+        color: gold;
+    }
+    #texto-entrada p {
+        font-size: 1.1em;
+    }
+    
+
+
+
+}
+
+@media (max-width: 390px) {
+    /* #torneios h1 {
+        font-size: 1.83em;
+    } */
+}

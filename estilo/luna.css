@@ -1,0 +1,792 @@
+@charset "UTF-8";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+}
+header {
+    padding: 30px 20px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#voltar {
+    display: flex;
+    background-color: rgb(202, 202, 202);
+    text-decoration: none;
+    color: black;
+    border: 2px solid rgb(40, 71, 107);
+    border-radius: 10px;
+    width: 125px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    box-shadow: 0px 0px 10px rgb(68, 81, 255);
+    margin-left: 3%;
+    transition-duration: 0.3s;
+
+
+}
+
+#voltar:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 117);
+    font-size: 2.25em;
+    background-color: rgb(238, 238, 238);
+}
+
+#voltar:active {
+    background-color: rgb(23, 23, 121);
+    color: white;
+    transition-duration: none;
+}
+
+.bot {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    margin: auto 20px;
+    font-size: 1.25em;
+    transition-duration: 0.4s;
+}
+
+.bot:hover {
+    scale: 1.2;
+    color: rgb(0, 225, 255);
+}
+article {
+    background-color: black;
+    height: 100vh;
+}
+
+#descrição {
+    background-color: white;
+}
+
+#entrada {
+    background: fixed url("imagens/only\ skin\ night.jpg") center no-repeat;
+    background-size: 150% 200%;
+    animation: background-sky  60s linear alternate infinite;
+    isolation: isolate;
+    position: relative;
+    box-shadow: inset 2px 125px 150px black;
+    overflow: hidden;
+    display: flex;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+#entrada::before {
+    content: '';
+    position: absolute;
+    background-color:  rgb(21, 33, 59);
+    left: 0;
+    top: 0;
+    width: calc(100% + 80px);
+    height: calc(100% + 80px);
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+@keyframes background-sky {
+    from {
+        background-position: 0% 50%;
+
+    }
+    to {
+        background-position: 100% 50%;
+        
+    }
+}
+
+
+
+#lua {
+    width: 90px;
+    height: 90px;
+    box-shadow: 0px 0px 50px #72a7b3;
+    border-radius: 50%;
+    filter: contrast(1.2) brightness(0.9);
+    margin-bottom: -90px;
+    animation: luasubindo 3.5s ease-in-out alternate infinite;
+    transition-duration: 1s;
+
+}
+#lua:hover {
+    box-shadow: 0px 10px 100px white;
+    filter: contrast(1.2) brightness(1.05);
+}
+#luna {
+    width: 90px;
+    height: 130px;
+    filter: contrast(1.1);
+}
+
+#logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 300px;
+    place-items: center;
+    width: 400px;
+
+}
+
+#apresentação {
+    display: inline-block;
+
+
+}
+
+#text {
+    margin-top: -40px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#text > h2 {
+    font-size: 2.15em;
+
+    color: #72a4af;
+    text-shadow: 1px 1px 5px rgb(23, 0, 124);
+}
+
+#text > h1 {
+    font-size: 3em;
+    color: #dfdfdf;
+    text-shadow: 2px 2px 10px rgb(4, 101, 192);
+}
+
+
+@keyframes luasubindo {
+    from {
+        transform: translateY(2px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+#gerais {
+
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #72a7b3;
+    border-radius: 10px;
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+
+    margin: 0px 15px 50px 15px;
+}
+#gerais > p {
+    font-size: 1.3em;
+    text-align: justify;
+    color: rgb(211, 211, 211);
+}
+
+#gerais::before {
+    position: absolute;
+    content: '';
+    left: -80px;
+    top: -280px;
+    bottom: 0;
+    right: 0;
+    width: 700px;
+    height: 800px;
+    background-image: linear-gradient(to right, #0084db 30%, rgb(0, 0, 128), rgb(196, 166, 0) 80%);
+    animation: estrelasgirando 20s linear infinite;
+    z-index: -1;
+
+}
+
+@keyframes estrelasgirando {
+    to {
+        rotate: 360deg;
+    }
+}
+
+
+#gerais::after {
+    position: absolute;
+    content: '';
+    inset: 5px;
+    background-color: rgb(7, 25, 61);
+    z-index: -1;
+    border-radius: 10px;
+
+}
+
+
+
+#scroll-montanha {
+    position: absolute;
+    left: 0;
+    bottom: -100vh;
+    width: 100%;
+    height: 150%;
+    filter: grayscale(0.5)
+
+
+
+
+}
+
+
+
+
+
+/* chaveamento  do torneio */
+
+
+
+#descrição {
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0.1%, #0b1e3d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+
+
+}
+
+
+#thebox {
+    height: 390px;
+    padding: 20px 20px;
+    background-color: black;
+    border-radius: 15px;
+    margin-inline: 20px;
+    box-shadow: 0px 0px 20px rgb(16, 0, 163);
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    z-index: 1;
+
+
+
+
+
+}
+
+
+.quartas, .semis, 
+#thefinal {
+    display: flex;
+    height: 98%;
+    margin-inline: 20px;
+}
+
+.semis {
+    text-align: center;
+    align-items: center;
+}
+
+
+.quartas { 
+
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+#thefinal {
+    align-items: center;
+    margin: 0px 50px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    margin-top: 10%;
+
+}
+
+.tamanho {
+    width: 140px;
+}
+
+
+.player {
+    background: url(imagens/galayx.jpg) center no-repeat;
+    background-size: 250%;
+    padding: 5px 4px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 2px solid rgb(187, 159, 0);
+    box-shadow: 0px 0px 10px  rgba(255, 217, 0, 0.753);
+    animation: galaxy 20s ease-in-out alternate infinite;
+    text-shadow: 0px 0px 10px rgb(40, 37, 253);
+}
+
+@keyframes galaxy {
+    from {
+        background-position: 0% 0%;
+
+    }
+    to {
+        background-position: 100% 20%;
+    }
+}
+
+#lafinale {
+    width: 200px;
+    height: auto;
+    padding: 10px 4px;
+    font-size: 1.3em;
+    text-align: center;
+
+    border-radius: 10px;
+    background: url(imagens/pexels-pixabay-355465.jpg) center right no-repeat;
+    background-size: 300%;
+    border: 2px solid rgb(216, 216, 216);
+    box-shadow: 0px 0px 10px white;
+    animation: final 10s ease-in-out alternate infinite;
+
+}
+
+#champion {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 0px 2px 20px #00badb;
+
+    
+}
+
+
+@keyframes final {
+    from {
+        background-position: right center;
+
+    }
+    to {
+        background-position: right top;
+    }
+}
+
+#linha {
+    color: rgb(167, 142, 0);
+    font-size: 3em;
+    
+}
+.x {
+    margin: 5px 0px;
+    font-size: 1.75em;
+    color: gold;
+}
+
+#stars {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+
+}
+
+#stars span {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(172, 146, 0);
+    margin: 0 4px;
+    animation: starsup 15s linear infinite;
+    animation-duration: calc(350s / var(--i));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: blur(10px);
+
+}
+
+@keyframes starsup {
+    from {
+        margin-top: 110vh;
+        rotate: 0deg;
+    }
+    to {
+        margin-top: -10vh;
+        rotate: 360deg;
+    }
+
+}
+
+
+
+#players {
+    height: auto;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+
+#informação {
+    text-align: center;
+}
+
+#informação > h1 {
+    font-size: 2.75em;
+    margin-bottom: 30px;
+}
+#informação > div {
+    max-width: 550px;
+    padding: 20px;
+    background-color: rgb(0, 0, 73);
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+}
+#informação p {
+    font-size: 1.3em;
+    text-align: justify;
+    color: rgb(240, 240, 240);
+}
+
+
+
+
+/* card terminal */ 
+.alinhamento {
+    width: 100%;
+    padding: 0px 25px;
+    height: auto;
+    margin: 40px 0px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+
+}
+
+
+.container {
+    position: relative;
+
+    width: 200px;
+    height: 300px;
+
+}
+
+
+.container:hover .flip {
+    transform: rotateY(180deg);
+
+
+}
+
+
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+}
+
+.back, .front {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-color: black;
+    border: 2.5px solid rgb(226, 226, 226);
+    justify-content: space-between;
+    place-items: center;
+    
+    
+}
+
+
+#front-legend::before, #back-legend::before {
+    content: '';
+    position: absolute;
+    left: -6.5%;
+    top: -3.5%;
+    z-index: -1;
+    height: 107.5%;
+    width: 112.5%;
+    background-color: rgb(230, 81, 55);
+    border-radius: 15px;
+    animation: borda 5s linear infinite;
+
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+.back > div {
+    margin: auto;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 11px;
+    border-radius: 15px;
+
+}
+
+#front-legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* animation: front-color 10s linear infinite alternate; */
+    border: 3px solid violet;
+
+}
+
+/* @keyframes front-color {
+    0% {
+        background-color: rgb(218, 91, 69);
+    }
+    10% {
+        background-color: rgb(199, 65, 199);
+
+    }
+    20% {
+        background-color: purple;
+
+    }
+    30% {
+        background-color: blueviolet;
+
+    }
+    40% {
+        background-color: blue;
+    }
+    50% {
+        background-color: rgb(0, 85, 155);
+    }
+    60% {
+        background-color: rgb(0, 174, 255);
+    }
+    70% {
+        background-color: rgb(0, 233, 78);
+    }
+    80% {
+        background-color: green;
+    }
+    90% {
+        background-color: greenyellow;
+    }
+    100% {
+        background-color: rgb(251, 255, 0);
+    }
+} */
+
+.img-front {
+    z-index: 1;
+    width: 95%;
+    height: 65%;
+    margin-top: 5px;
+
+}
+@keyframes borda {
+    from {
+        filter: blur(7px);
+    }
+    50% {
+        filter: blur(7px) hue-rotate(350deg);
+    }
+    to {
+        filter: blur(7px);
+    }
+}
+
+
+#plap {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+
+#plap > img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-top: 7.5px;
+}
+#plap > h1 {
+    font-size: 3.2em;
+    color: rgb(0, 212, 212);
+
+    text-shadow: 2px 2px 5px rgb(0, 26, 255);
+    margin-right: 10px ;
+}
+
+
+
+#titulo {
+    margin-top: 40px;
+    
+    font-size: 2em;
+    color: gold;
+    text-shadow: 0px 0px 5px rgb(0, 214, 214);
+
+}
+
+
+
+#back-legend > div {
+    margin: auto;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 11px;
+    border-radius: 15px;
+
+}
+#back-legend p {
+    color: white;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+#thebest::before {
+    position: absolute;
+    top: -30%;
+    right: -35%;
+    content: '';
+
+    background: url(imagens/thebest.png) center no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    transform: rotate(40deg);
+    z-index: 1;
+
+}
+
+
+
+/* card bea */
+#champion::before {
+    position: absolute;
+    top: -30%;
+    right: -35%;
+    content: '';
+
+    background: url(imagens/thebest.png) center no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 120px;
+    transform: rotate(40deg);
+    z-index: 1;
+
+}
+
+#champion  h1 {
+    font-size: 1.5em;
+    color: gold;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 5px rgb(195, 0, 255);
+}
+
+
+
+
+#champion p {
+    font-size: 0.425em;
+}
+
+#champion #front-legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    /* animation: front-color 10s linear infinite alternate; */
+    border: 3px solid rgb(212, 181, 0);
+
+}
+
+
+#restante {
+    margin-top: 100px;
+
+}
+#restante h1 {
+    font-size: 2.85em;
+    color: cyan;
+}
+
+#outros {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
+
+#outros .front > span > h1 {
+    font-size: 2.9em;
+    margin-bottom: 30px;
+    color: rgb(230, 230, 230);
+    text-shadow: 1px 1px 5px rgb(0, 122, 192);
+}
+
+#outros .back > div > p {
+    text-align: justify;
+    color: rgb(240, 240, 240);
+}
+
+
+
+#klaus {
+    margin-top: -2px;
+    font-size: 1em;
+}
+
+#nict {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#nic {
+    font-size: 1.06em;
+}
+
+
+#canoa {
+    font-size: 1.15em;
+}
+
+#hoopa {
+    font-size: 1.06em;
+}
+
+#prince {
+    font-size: 1.125em;
+}
